@@ -50,3 +50,10 @@ For example, if we wish to multiply Item_Fat_Content variable by 100, we can do 
 
 So, we will go ahead combine both train and test data and will carry out data visualization, feature engineering, one-hot encoding, and label encoding. Later we would split this combined data back to train and test datasets.
 
+# Issues found after Extrapolatory Data Analysis are 
+1. Missing values in Item_Weight
+2. Missing Values in Outlet_Size
+3. Outlet_Sales is positively skewed
+4. Item_Visibility is Positively skewed
+5. There is a string of points at Item_Visibility = 0.0 which seems strange as item visibility cannot be completely zero.
+
