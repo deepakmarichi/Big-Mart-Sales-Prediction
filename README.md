@@ -51,9 +51,20 @@ For example, if we wish to multiply Item_Fat_Content variable by 100, we can do 
 So, we will go ahead combine both train and test data and will carry out data visualization, feature engineering, one-hot encoding, and label encoding. Later we would split this combined data back to train and test datasets.
 
 # Issues found after Extrapolatory Data Analysis are 
-1. Missing values in Item_Weight
-2. Missing Values in Outlet_Size
+1. Missing values in Item_Weight ==> Replaced by Item_Weight of corresponding Item_Identifier
+2. Missing Values in Outlet_Size ==> Replaced NaN values by "Small"
 3. Outlet_Sales is positively skewed
 4. Item_Visibility is Positively skewed
-5. There is a string of points at Item_Visibility = 0.0 which seems strange as item visibility cannot be completely zero.
+5. Item_Visibility = 0.0 ==> Replaced by mean of Item_Visibility of corresponding Item_Identifier
+
+# Feature Engineering
+Most of the times, the given features in a dataset are not sufficient to give satisfactory predictions. In such cases, we have to create new features which might help in improving the model’s performance. Let’s try to create some new features for our dataset.
+
+In this section we will create the following new features:
+
+Item_Type_new: Broader categories for the variable Item_Type.
+Item_category: Categorical variable derived from Item_Identifier.
+Outlet_Years: Years of operation for outlets.
+price_per_unit_wt: Item_MRP/Item_Weight
+Item_MRP_clusters: Binned feature for Item_MRP.
 
