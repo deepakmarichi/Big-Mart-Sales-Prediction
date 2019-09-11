@@ -62,9 +62,9 @@ Most of the times, the given features in a dataset are not sufficient to give sa
 
 In this section we will create the following new features:
 
-Item_Type_new: Broader categories for the variable Item_Type.
-Item_category: Categorical variable derived from Item_Identifier.
-Outlet_Years: Years of operation for outlets.
-price_per_unit_wt: Item_MRP/Item_Weight
-Item_MRP_clusters: Binned feature for Item_MRP.
+Item_Type_new: Broader categories for the variable Item_Type.  
+Item_category: Categorical variable derived from Item_Identifier.  
+Outlet_Years: Years of operation for outlets.  
+price_per_unit_wt: Item_MRP/Item_Weight.  
+Item_MRP_clusters: Binned feature for Item_MRP.  
 
