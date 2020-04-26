@@ -82,6 +82,7 @@ In this section we will create the following new features:
 * MSE: 0.2741788727205858
 * RMSE: 0.5236209246397491
 * Rsquared : 73.8333245654847
+
 **Without log transformation of Item_Outlet_Sales**
 * MAE: 810.0715791198803
 * MSE: 1158323.0500781583
