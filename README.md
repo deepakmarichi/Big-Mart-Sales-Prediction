@@ -21,7 +21,8 @@ A regression practice problem wherein we have to predict product-wise and store-
 * 10. Using KFold with Linear Regression
 * 11. RandomForest Model
 * 12. XGBoost Model
-* 13. Summary
+* 13. CatBoosting
+* 14. Summary
 
 
 ## What is hypothesis generation?
