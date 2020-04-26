@@ -78,39 +78,39 @@ In this section we will create the following new features:
 
 ## Linear Regression model 
 **Without log transformation of Item_Outlet_Sales**
-MAE: 0.4013948690353487
-MSE: 0.2741788727205858
-RMSE: 0.5236209246397491
-Rsquared : 73.8333245654847
+* MAE: 0.4013948690353487
+* MSE: 0.2741788727205858
+* RMSE: 0.5236209246397491
+* Rsquared : 73.8333245654847
 **Without log transformation of Item_Outlet_Sales**
-MAE: 810.0715791198803
-MSE: 1158323.0500781583
-RMSE: 1076.254175405679
-Rsquared : 56.88539060798533
+* MAE: 810.0715791198803
+* MSE: 1158323.0500781583
+* RMSE: 1076.254175405679
+* Rsquared : 56.88539060798533
 
 ## KFolds With Linear Regression
 **With log transformation of Item_Outlet_Sales**
-RMSE: 0.5223383073684176
+* RMSE: 0.5223383073684176
 
 **Without log transformation of Item_Outlet_Sales**
-RMSE: 1074.4775761353715
+* RMSE: 1074.4775761353715
 
 ## Random Forest Model
 **With log transformation of Item_Outlet_Sales**
-RMSE: 0.4582341745618182
+* RMSE: 0.4582341745618182
 
 **Without log transformation of Item_Outlet_Sales**
-RMSE: 896.3160736695859
+* RMSE: 896.3160736695859
 
 ## XGBoost Model
 **With log transformation of Item_Outlet_Sales**
-RMSE: 0.34808372157504675
+* RMSE: 0.34808372157504675
 
 **Without log transformation of Item_Outlet_Sales**
-RMSE: 638.5169522174853
+* RMSE: 638.5169522174853
 
 ## CatBoosting
-R-Squared : 99.9842171223728
+* R-Squared : 99.9842171223728
 
 ## Summary
 It seems that CatBoosting methodolgy has overfitted the data but XGBoost is giving some practical result with RMSE ~638.
