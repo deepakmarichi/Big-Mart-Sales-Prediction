@@ -2,32 +2,26 @@
 
 A regression practice problem wherein we have to predict product-wise and store-wise sales.Sales prediction is a very common real-life problem that each company faces atleast once in its lifetime. If done correctly, it can have a significant impact on the success and performance of that company. According to a study, companies with accurate sales predictions are 10% more likely to grow their revenue year-over-year and 7.3% more likely to hit quota.
 
-## The course is divided into below modules:
+## The project is divided into below modules:
 
 * Exploratory Data Analysis
 * Data Preparation
 * Predictive Modeling using different techniques.
 
 ## We will handle this problem in a structured way. We will be following the table of content given below.
-* Problem Statement
-* Hypothesis Generation
-* Loading Packages and Data
-* Data Structure and Content
-* Exploratory Data Analysis
-* Univariate Analysis
-* Bivariate Analysis
-* Missing Value Treatment
-* Feature Engineering
-* Encoding Categorical Variables
-* Label Encoding
-* One Hot Encoding
-* PreProcessing Data
-* Modeling
-* Linear Regression
-* Regularized Linear Regression
-* RandomForest
-* XGBoost
-* Summary
+* 1. Problem Statement
+* 2. Loading Packages and Data
+* 3. Understanding The Data
+* 4. Exploratory Data Analysis
+* 5. Imputing Missing Value 
+* 6. Feature Engineering
+* 7. Encoding Categorical Variables
+* 8. Data PreProcessing
+* 9. Linear Regression Model
+* 10. Using KFold with Linear Regression
+* 11. RandomForest Model
+* 12. XGBoost Model
+* 13. Summary
 
 
 ## What is hypothesis generation?
@@ -40,13 +34,13 @@ One very effective technique to generate hypotheses is by creating mindmaps. You
 
 ## We can start the process by working on four levels: Store Level, Product Level, Customer Level and Macro Level.
 
-Store Level : City type | Population Density | Competitors | Marketing | Location | Ambiance
+**Store Level** : City type | Population Density | Competitors | Marketing | Location | Ambiance
 
-Product Level : Brand | Packaging | Utility | Display Area | Advertising
+**Product Level** : Brand | Packaging | Utility | Display Area | Advertising
 
-Customer Level : Customer Behavior | Job Profile | Family Size | Annual Income
+**Customer Level** : Customer Behavior | Job Profile | Family Size | Annual Income
 
-Macro Level : Environment | Economic Growth
+**Macro Level** : Environment | Economic Growth
 
 ## Combine Train and Test
 
@@ -70,8 +64,52 @@ Most of the times, the given features in a dataset are not sufficient to give sa
 
 In this section we will create the following new features:
 
-* Item_Type_new: Broader categories for the variable Item_Type.  
-* Item_category: Categorical variable derived from Item_Identifier.  
-* Outlet_Years: Years of operation for outlets.  
-* price_per_unit_wt: Item_MRP/Item_Weight.  
-* Item_MRP_clusters: Binned feature for Item_MRP.  
+* **Item_Type_new**: Broader categories for the variable Item_Type.  
+* **Item_category**: Categorical variable derived from Item_Identifier.  
+* **Outlet_Years**: Years of operation for outlets.  
+* **price_per_unit_wt**: Item_MRP/Item_Weight.  
+* **Item_MRP_clusters**: Binned feature for Item_MRP. 
+
+## Data PreProcessing
+* Removed skewness from Item_Visibility variable using log transformation.
+* Removed skewness from price_per_unit_weight variable using log transformation.
+* Removed skewness from Item_Outlet_Sales variable using log transformation.
+
+## Linear Regression model 
+**Without log transformation of Item_Outlet_Sales**
+MAE: 0.4013948690353487
+MSE: 0.2741788727205858
+RMSE: 0.5236209246397491
+Rsquared : 73.8333245654847
+**Without log transformation of Item_Outlet_Sales**
+MAE: 810.0715791198803
+MSE: 1158323.0500781583
+RMSE: 1076.254175405679
+Rsquared : 56.88539060798533
+
+## KFolds With Linear Regression
+**With log transformation of Item_Outlet_Sales**
+RMSE: 0.5223383073684176
+
+**Without log transformation of Item_Outlet_Sales**
+RMSE: 1074.4775761353715
+
+## Random Forest Model
+**With log transformation of Item_Outlet_Sales**
+RMSE: 0.4582341745618182
+
+**Without log transformation of Item_Outlet_Sales**
+RMSE: 896.3160736695859
+
+## XGBoost Model
+**With log transformation of Item_Outlet_Sales**
+RMSE: 0.34808372157504675
+
+**Without log transformation of Item_Outlet_Sales**
+RMSE: 638.5169522174853
+
+## CatBoosting
+R-Squared : 99.9842171223728
+
+## Summary
+It seems that CatBoosting methodolgy has overfitted the data but XGBoost is giving some practical result with RMSE ~638.
