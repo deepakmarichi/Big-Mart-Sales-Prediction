@@ -77,7 +77,7 @@ In this section we will create the following new features:
 * Removed skewness from Item_Outlet_Sales variable using log transformation.
 
 ## Linear Regression model 
-**Without log transformation of Item_Outlet_Sales**
+**With log transformation of Item_Outlet_Sales**
 * MAE: 0.4013948690353487
 * MSE: 0.2741788727205858
 * RMSE: 0.5236209246397491
