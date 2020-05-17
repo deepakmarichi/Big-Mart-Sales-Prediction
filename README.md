@@ -76,42 +76,9 @@ In this section we will create the following new features:
 * Removed skewness from price_per_unit_weight variable using log transformation.
 * Removed skewness from Item_Outlet_Sales variable using log transformation.
 
-## Linear Regression model 
-**With log transformation of Item_Outlet_Sales**
-* MAE: 0.4013948690353487
-* MSE: 0.2741788727205858
-* RMSE: 0.5236209246397491
-* Rsquared : 73.8333245654847
+## Models' R-Square Value
+* Linear Regresiion : 74%
+* Random Forest     : 72%
+* XGBoost Algorithm : 70%
+* CatBoost Algorithm: 99%
 
-**Without log transformation of Item_Outlet_Sales**
-* MAE: 810.0715791198803
-* MSE: 1158323.0500781583
-* RMSE: 1076.254175405679
-* Rsquared : 56.88539060798533
-
-## KFolds With Linear Regression
-**With log transformation of Item_Outlet_Sales**
-* RMSE: 0.5223383073684176
-
-**Without log transformation of Item_Outlet_Sales**
-* RMSE: 1074.4775761353715
-
-## Random Forest Model
-**With log transformation of Item_Outlet_Sales**
-* RMSE: 0.4582341745618182
-
-**Without log transformation of Item_Outlet_Sales**
-* RMSE: 896.3160736695859
-
-## XGBoost Model
-**With log transformation of Item_Outlet_Sales**
-* RMSE: 0.34808372157504675
-
-**Without log transformation of Item_Outlet_Sales**
-* RMSE: 638.5169522174853
-
-## CatBoosting
-* R-Squared : 99.9842171223728
-
-## Summary
-It seems that CatBoosting methodolgy has overfitted the data but XGBoost is giving some practical result with RMSE ~638.
